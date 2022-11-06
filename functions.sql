@@ -162,17 +162,3 @@ return @email
 end
 GO
 
-declare @ID uniqueidentifier
-select @ID = NEWID()
--- select dbo.FakeFirstName(@ID), dbo.FakeLastName(@ID)
-
-GO
-
---BEGIN TRANSACTION
-
---UPDATE [ndc-tickets-20220919]].dbo.TicketOrders
---	SET CustomerName = dbo.FakeFirstName(Id) + ' ' + dbo.FakeLastName(Id),
---	CustomerEmail = dbo.FakeEmailAddress(Id, Id),
---	CustomerPhone = dbo.FakePhone(Id),
---	Address = dbo.FakeAddress(Id),
---	PostalCode = dbo.FakePostalCode(
